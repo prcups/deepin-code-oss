@@ -1,0 +1,4 @@
+version=4
+opts="filenamemangle=s%(?:.*?)?v?@ANY_VERSION@(@ARCHIVE_EXT@)%@PACKAGE@-$1$2%" \
+  https://github.com/microsoft/vscode/tags?after=1.90.1 \
+  (?:.*?/)?v?@ANY_VERSION@@ARCHIVE_EXT@

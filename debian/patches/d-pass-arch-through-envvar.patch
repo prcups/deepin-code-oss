@@ -1,0 +1,22 @@
+--- a/build/lib/snapshotLoader.js
++++ b/build/lib/snapshotLoader.js
+@@ -11,7 +11,7 @@
+     const cp = require('child_process');
+     const mksnapshot = path.join(__dirname, `../../node_modules/.bin/${process.platform === 'win32' ? 'mksnapshot.cmd' : 'mksnapshot'}`);
+     const product = require('../../product.json');
+-    const arch = (process.argv.join('').match(/--arch=(.*)/) || [])[1];
++    const arch = process.env.ARCH;
+     //
+     let loaderFilepath;
+     let startupBlobFilepath;
+--- a/build/lib/snapshotLoader.ts
++++ b/build/lib/snapshotLoader.ts
+@@ -12,7 +12,7 @@
+ 
+ 	const mksnapshot = path.join(__dirname, `../../node_modules/.bin/${process.platform === 'win32' ? 'mksnapshot.cmd' : 'mksnapshot'}`);
+ 	const product = require('../../product.json');
+-	const arch = (process.argv.join('').match(/--arch=(.*)/) || [])[1];
++	const arch = process.env.ARCH;
+ 
+ 	//
+ 	let loaderFilepath: string;

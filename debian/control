@@ -1,0 +1,35 @@
+Source: code-oss
+Section: editors
+Priority: optional
+Maintainer: Eric Long <i@hack3r.moe>
+Build-Depends:
+ debhelper-compat (= 13),
+ nodejs (>= 16.17.0),
+ electron-29 (>= 28.4.2),
+ electron-29 (<< 29.4.3),
+ npm,
+ yarnpkg,
+ gulp,
+ node-gyp,
+ zip,
+ libsecret-1-dev,
+ libxkbfile-dev,
+ libkrb5-dev,
+Standards-Version: 4.5.1
+Homepage: https://code.visualstudio.com
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/hack3ric/debian-code.git
+Vcs-Browser: https://github.com/hack3ric/debian-code
+
+Package: code-oss
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ electron-29 (>= 28.4.2),
+ electron-29 (<< 29.4.3),
+ ripgrep,
+Provides: code
+Conflicts: code
+Description: The Open Source build of Visual Studio Code (vscode) editor

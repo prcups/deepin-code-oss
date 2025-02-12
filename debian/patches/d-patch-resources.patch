@@ -1,0 +1,65 @@
+--- a/resources/linux/code-url-handler.desktop
++++ b/resources/linux/code-url-handler.desktop
+@@ -1,12 +1,12 @@
+ [Desktop Entry]
+-Name=@@NAME_LONG@@ - URL Handler
++Name=Code - OSS - URL Handler
+ Comment=Code Editing. Redefined.
+ GenericName=Text Editor
+-Exec=@@EXEC@@ --open-url %U
+-Icon=@@ICON@@
++Exec=/usr/bin/code --open-url %U
++Icon=com.visualstudio.code.oss
+ Type=Application
+ NoDisplay=true
+ StartupNotify=true
+ Categories=Utility;TextEditor;Development;IDE;
+-MimeType=x-scheme-handler/@@URLPROTOCOL@@;
++MimeType=x-scheme-handler/vscode;
+ Keywords=vscode;
+--- a/resources/linux/code.appdata.xml
++++ b/resources/linux/code.appdata.xml
+@@ -1,9 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <component type="desktop">
+-	<id>@@NAME@@.desktop</id>
+-	<metadata_license>@@LICENSE@@</metadata_license>
+-	<project_license>@@LICENSE@@</project_license>
+-	<name>@@NAME_LONG@@</name>
++	<id>code.desktop</id>
++	<metadata_license>MIT</metadata_license>
++	<project_license>MIT</project_license>
++	<name>Code - OSS</name>
+ 	<url type="homepage">https://code.visualstudio.com</url>
+ 	<summary>Visual Studio Code. Code editing. Redefined.</summary>
+ 	<description>
+--- a/resources/linux/code.desktop
++++ b/resources/linux/code.desktop
+@@ -1,14 +1,14 @@
+ [Desktop Entry]
+-Name=@@NAME_LONG@@
++Name=Code - OSS
+ Comment=Code Editing. Redefined.
+ GenericName=Text Editor
+-Exec=@@EXEC@@ %F
+-Icon=@@ICON@@
++Exec=/usr/bin/code %F
++Icon=com.visualstudio.code.oss
+ Type=Application
+ StartupNotify=false
+-StartupWMClass=@@NAME_SHORT@@
++StartupWMClass=Code
+ Categories=TextEditor;Development;IDE;
+-MimeType=application/x-@@NAME@@-workspace;
++MimeType=application/x-code-workspace;
+ Actions=new-empty-window;
+ Keywords=vscode;
+ 
+@@ -23,5 +23,5 @@
+ Name[ru]=Новое пустое окно
+ Name[zh_CN]=新建空窗口
+ Name[zh_TW]=開新空視窗
+-Exec=@@EXEC@@ --new-window %F
+-Icon=@@ICON@@
++Exec=/usr/bin/code --new-window %F
++Icon=com.visualstudio.code.oss

@@ -1,0 +1,23 @@
+code-oss (1.86.0-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Eric Long <i@hack3r.moe>  Fri, 02 Feb 2024 14:21:21 +0800
+
+code-oss (1.81.1-1) unstable; urgency=medium
+
+  * New upstream version
+
+ -- Eric Long <i@hack3r.moe>  Mon, 14 Aug 2023 22:17:05 +0800
+
+code-oss (1.80.1-1+electron23) unstable; urgency=medium
+
+  * Use Electron 23.3.11 as runtime
+
+ -- Eric Long <i@hack3r.moe>  Sat, 05 Aug 2023 21:00:22 +0800
+
+code-oss (1.80.1-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Eric Long <i@hack3r.moe>  Mon, 24 Jul 2023 22:50:21 +0800
